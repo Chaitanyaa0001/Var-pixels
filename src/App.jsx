@@ -2,18 +2,27 @@ import React from 'react'
 import Navbar from './components/navbar/Navbar'
 import Main from './components/main/Main'
 import './App.css'
-import BackgroundCubes from './components/Backgroundcubes/BackgroundCubes'
 import Services from './components/servicesoverview/Services'
+import Growth from './components/growth/Growth'
+import Products from './components/featuredproducts/Products';
+import Client from './components/clients/Client'
+import Cta from './components/cta/Cta'
+import Footer from './components/footer/Footer'
 
 
 const App = () => {
   return (
     <div id='app'>
       <div id='landingpage'>
-        <BackgroundCubes/>
+        
         <Navbar/>
         <Main />
         <Services/>
+        <Growth/>
+        <Products/>
+        <Client/>
+        <Cta/>
+        <Footer/>
         
 
       </div>
