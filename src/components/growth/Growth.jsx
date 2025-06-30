@@ -32,10 +32,14 @@ const Growth = () => {
         </div>
         <div className="growth-cards-container">
           {growthData.map((item, index) => (
-            <div className="growth-card" key={index}>
-              <h3>{item.content}</h3>
-            </div>
-          ))}
+  <div className="growth-card" key={index}>
+    <div className="growth-card-content">
+      <span className="blue-dot"></span>
+      <h3>{item.content}</h3>
+    </div>
+  </div>
+))}
+
         </div>
       </div>
     </div>

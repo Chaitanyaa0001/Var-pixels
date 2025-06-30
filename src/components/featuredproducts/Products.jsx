@@ -1,30 +1,36 @@
 import React from 'react';
 import './Products.css';
 import { Cube } from '../cube/Cube'; // Ensure path is correct
+import f1 from "../../assets/f1.jpg"
+import f2 from "../../assets/f2.jpg"
+import f3 from "../../assets/f3.jpg"
+import f4 from "../../assets/f4.jpg"
+
+
 
 const projectData = [
   {
     title: 'The Ayodhya Skates',
     description: "Complete branding, website, and digital marketing for Ayodhya's premier skating academy.",
-    image: 'https://via.placeholder.com/300x180/000000/FFFFFF?text=Ayodhya+Skates',
+    image: f1,
     link: '#',
   },
   {
     title: 'Hurricane Vent',
     description: "Digital Marketing + SEO for industrial audience in UAE & Oman.",
-    image: 'https://via.placeholder.com/300x180?text=Hurricane+Vent',
+    image: f2,
     link: '#',
   },
   {
     title: 'Portfolio Website',
     description: 'Sleek personal portfolio for law professionals with aesthetic functionality.',
-    image: 'https://via.placeholder.com/300x180?text=Portfolio+Website',
+    image: f3,
     link: '#',
   },
   {
     title: 'Dubey Misthan Bhandar',
     description: "High-conversion website for one of the region's oldest sweet shops.",
-    image: 'https://via.placeholder.com/300x180?text=Dubey+Misthan',
+    image: f4,
     link: '#',
   },
 ];

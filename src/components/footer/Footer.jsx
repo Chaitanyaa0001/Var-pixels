@@ -2,6 +2,7 @@ import React from 'react';
 import './Footer.css';
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import { FaInstagram, FaLinkedinIn, FaTwitter, FaYoutube } from 'react-icons/fa';
+import WhatsAppButton from '../whatsapp/WhatsAppButton';
 
 const Footer = () => {
   return (
@@ -22,6 +23,7 @@ const Footer = () => {
       </div>
       <hr />
       <p className="footer-copy">© 2024 VAR PIXELS. All rights reserved.</p>
+       <WhatsAppButton />
     </footer>
   );
 };

@@ -1,0 +1,41 @@
+/* src/components/WhatsAppButton.css */
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  background-color: #25d366;
+  border-radius: 50%;
+  padding: 16px;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: jump 2s infinite;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-icon {
+  font-size: 28px;
+  color: white;
+}
+
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Responsive if needed */
+@media (max-width: 480px) {
+  .whatsapp-button {
+    bottom: 20px;
+    right: 15px;
+    padding: 12px;
+  }
+
+  .whatsapp-icon {
+    font-size: 22px;
+  }
+}

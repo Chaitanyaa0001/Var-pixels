@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 import { FaBars, FaTimes } from 'react-icons/fa'; // FontAwesome for menu icons
+import logo from "../../assets/logo.png"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,7 @@ const Navbar = () => {
       <div className="container">
         <div className="Logo">
           <div className="part1">
-            <img src="" alt="logo" />
+           <img src={logo} alt="logo" style={{ width: '60px', height: '45px', objectFit: 'contain' }} />
             <h2>Var PIXELS</h2>
           </div>
         </div>
