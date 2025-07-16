@@ -1,13 +1,13 @@
 import React from 'react'
 import Navbar from '../../components/navbar/Navbar'
 
-const Service = () => {
+const Servicepage = () => {
   return (
     <div>
         <Navbar/>
-
+        hiweibvevivi
     </div>
   )
 }
 
-export default Service
+export default Servicepage

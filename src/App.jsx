@@ -1,15 +1,17 @@
 import React from 'react'
 import './App.css'
-import { Route, Router } from 'react-router-dom'
+import { Route, Router, Routes } from 'react-router-dom'
 import Home from './pages/homepage/Home'
+import Servicepage from './pages/services/Servicepage'
 
 
 
 const App = () => {
   return (
-    <Router>
-      <Route to='/' element={<Home/>}></Route>
-    </Router>      
+    <Routes>
+      <Route path='/' element={<Home/>}></Route>
+      <Route path='/service' element={<Servicepage/>}></Route>
+    </Routes>      
   )
 }
 
