@@ -116,6 +116,23 @@
   transition: background 0.3s, color 0.3s;
 }
 
+
+/* Default navlink style */
+.navlink {
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+/* Active navlink */
+.navlink.active {
+  background-color: #CFFAFE; /* Light teal */
+  color: black;
+}
+
+
 .mobile-menu li:hover {
   background-color: #e0f2fe;
   color: #2563eb; /* Bright Blue */

@@ -1,57 +1,85 @@
 import React from 'react';
-import './Services.css';
-import { RiGlobalLine, RiSmartphoneLine, RiBarChartGroupedLine, RiBrushLine, RiCpuLine } from 'react-icons/ri';
+import {
+  RiGlobalLine,
+  RiSmartphoneLine,
+  RiBarChartGroupedLine,
+  RiBrushLine,
+  RiCpuLine,
+} from 'react-icons/ri';
 
 const serviceData = [
   {
-    icon: <RiGlobalLine />,
+    icon: <RiGlobalLine className="text-3xl text-blue-500" />,
     title: "Web Design & Development",
     description: "Fast, secure, SEO-ready websites tailored to your brand.",
   },
   {
-    icon: <RiSmartphoneLine />,
+    icon: <RiSmartphoneLine className="text-3xl text-purple-500" />,
     title: "App Development",
     description: "Mobile-first interfaces designed for user delight.",
   },
   {
-    icon: <RiBarChartGroupedLine />,
+    icon: <RiBarChartGroupedLine className="text-3xl text-indigo-500" />,
     title: "Digital Marketing & Strategy",
     description: "Campaigns that bring traffic, leads, and conversions.",
   },
   {
-    icon: <RiBrushLine />,
+    icon: <RiBrushLine className="text-3xl text-pink-500" />,
     title: "Branding & SEO",
     description: "Logo, brand voice, and visuals that stick in people's minds.",
   },
   {
-    icon: <RiCpuLine />,
+    icon: <RiCpuLine className="text-3xl text-cyan-500" />,
     title: "AI/ML Solutions",
     description: "Smart tech that works for your business.",
   },
+  {
+    icon: <RiCpuLine className="text-3xl text-cyan-500" />,
+    title: "Social Media Managnment",
+    description:"Strategic social media experiences that help your brand grow, engage, and convert."
+  }
 ];
 
 const Services = () => {
   return (
-    <div className="services">
-      <div className="heading">
-        <span>SERVICES OVERVIEW</span>
-        <h2>Everything You Need To Launch & Grow Online</h2>
-        <p>From strategy to deployment, we provide comprehensive digital solutions.</p>
+    <div className="relative bg-white py-16 px-6 sm:px-10 md:px-20 lg:px-32 text-center overflow-hidden z-10">
+      {/* Heading */}
+      <div className="max-w-4xl mx-auto mb-12">
+        <span className="text-cyan-600 font-bold text-lg uppercase block mb-2">
+          Services Overview
+        </span>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+          Everything You Need to Launch & Grow Online
+        </h2>
+        <p className="text-gray-600 text-base md:text-lg mt-4">
+          From strategy to deployment, we provide comprehensive digital solutions.
+        </p>
       </div>
 
-      <div className="cards-container">
+      {/* Service Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center">
         {serviceData.map((service, index) => (
-          <div className="card" key={index}>
-            <div className="icon">
-              <i className="service-icon">{service.icon}</i>
+          <div
+            key={index}
+            className="bg-white border border-gray-100 rounded-xl shadow-sm hover:shadow-md transition p-6 max-w-xs w-full text-left"
+          >
+            <div className="mb-4">
+              {service.icon}
             </div>
-            <span className="card-title">{service.title}</span>
-            <p className="card-desc">{service.description}</p>
+            <h3 className="font-semibold text-lg text-gray-900 mb-2">
+              {service.title}
+            </h3>
+            <p className="text-sm text-gray-600">{service.description}</p>
           </div>
         ))}
       </div>
 
-      <button>Explore Services →</button>
+      {/* CTA Button */}
+      <div className="mt-12">
+        <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 px-6 rounded-lg text-base font-medium transition hover:from-blue-600 hover:to-indigo-600">
+          Explore Services →
+        </button>
+      </div>
     </div>
   );
 };

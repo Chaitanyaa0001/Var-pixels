@@ -1,63 +1,68 @@
 import React from 'react';
-import './Products.css';
-
-import { Cube } from '../cube/Cube';
-
-
+import Cube from '../cube/Cube';
 
 const projectData = [
   {
     title: 'The Ayodhya Skates',
     description: "Complete branding, website, and digital marketing for Ayodhya's premier skating academy.",
-    // image: '',
     link: '#',
   },
   {
     title: 'Hurricane Vent',
     description: "Digital Marketing + SEO for industrial audience in UAE & Oman.",
-    // image: '',
     link: '#',
   },
   {
     title: 'Portfolio Website',
     description: 'Sleek personal portfolio for law professionals with aesthetic functionality.',
-    // image: '',
     link: '#',
   },
   {
     title: 'Dubey Misthan Bhandar',
     description: "High-conversion website for one of the region's oldest sweet shops.",
-    // image: '',
     link: '#',
   },
 ];
 
 const Products = () => {
   return (
-    <div id="products" className="products-section">
+    <div id="products" className="relative bg-white py-16 px-6 overflow-hidden z-10">
       {/* Floating Cubes */}
-      <div className="cube-wrapper cube-left"><Cube /></div>
-      <div className="cube-wrapper cube-right"><Cube /></div>
+      <div className="absolute top-[10%] left-0 w-[80px] h-[80px] opacity-50 pointer-events-none animate-[floatCubeLeft_6s_ease-in-out_infinite] z-0">
+        <Cube />
+      </div>
+      <div className="absolute bottom-[15%] right-0 w-[80px] h-[80px] opacity-50 pointer-events-none animate-[floatCubeRight_8s_ease-in-out_infinite] z-0">
+        <Cube />
+      </div>
 
       {/* Floating Circles */}
-      <div className="circle circle-1"></div>
-      <div className="circle circle-2"></div>
-      <div className="circle circle-3"></div>
+      <div className="absolute top-[20%] left-[40%] w-[50px] h-[50px] border-2 border-cyan-600 rounded-full opacity-40 pointer-events-none animate-[floatCircle_7s_ease-in-out_infinite]" />
+      <div className="absolute top-[50%] left-[50%] w-[50px] h-[50px] border-2 border-cyan-600 rounded-full opacity-40 pointer-events-none animate-[floatCircle_7s_ease-in-out_infinite] transform -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute bottom-[20%] right-[40%] w-[50px] h-[50px] border-2 border-cyan-600 rounded-full opacity-40 pointer-events-none animate-[floatCircle_7s_ease-in-out_infinite]" />
 
-      <div className="products-container">
-        <div className="products-heading">
-          <span>Featured Projects</span>
-          <h2>Our Work that Speaks for Itself</h2>
+      {/* Main Container */}
+      <div className="w-full max-w-6xl mx-auto text-center z-10 relative">
+        {/* Heading */}
+        <div className="mb-12">
+          <span className="text-cyan-600 font-semibold text-xl block mb-2">Featured Projects</span>
+          <h2 className="text-4xl font-bold md:text-3xl">Our Work that Speaks for Itself</h2>
         </div>
 
-        <div className="products-grid">
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
           {projectData.map((item, index) => (
-            <div className="product-card" key={index}>
-              {/* <img src={item.image} alt={item.title} className="product-image" /> */}
-              <div className="product-content">
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-                <a href={item.link} className="view-link">
+            <div
+              key={index}
+              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-2 max-w-xs w-full cursor-pointer"
+            >
+              {/* <img src={item.image} alt={item.title} className="w-full h-44 object-cover" /> */}
+              <div className="p-4 text-left">
+                <h3 className="text-lg font-semibold mb-1">{item.title}</h3>
+                <p className="text-sm text-gray-600 mb-3">{item.description}</p>
+                <a
+                  href={item.link}
+                  className="text-cyan-500 font-semibold inline-flex items-center gap-1"
+                >
                   View Details <span>&rarr;</span>
                 </a>
               </div>
@@ -65,8 +70,11 @@ const Products = () => {
           ))}
         </div>
 
-        <div className="products-button">
-          <button>View Full Portfolio</button>
+        {/* Button */}
+        <div className="mt-12">
+          <button className="bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white py-3 px-6 rounded-lg text-base font-medium transition">
+            View Full Portfolio
+          </button>
         </div>
       </div>
     </div>
