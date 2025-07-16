@@ -1,6 +1,6 @@
 import React from 'react';
 import './Cta.css';
-import { Cube } from '../home/cube/Cube';
+import { Cube } from '../cube/Cube';
 
 const Cta = () => {
   return (

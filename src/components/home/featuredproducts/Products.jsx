@@ -1,10 +1,7 @@
 import React from 'react';
 import './Products.css';
-import { Cube } from '../cube/Cube'; // Ensure path is correct
-import f1 from "../../assets/f1.jpg"
-import f2 from "../../assets/f2.jpg"
-import f3 from "../../assets/f3.jpg"
-import f4 from "../../assets/f4.jpg"
+
+import { Cube } from '../cube/Cube';
 
 
 
@@ -12,25 +9,25 @@ const projectData = [
   {
     title: 'The Ayodhya Skates',
     description: "Complete branding, website, and digital marketing for Ayodhya's premier skating academy.",
-    image: f1,
+    image: '',
     link: '#',
   },
   {
     title: 'Hurricane Vent',
     description: "Digital Marketing + SEO for industrial audience in UAE & Oman.",
-    image: f2,
+    image: '',
     link: '#',
   },
   {
     title: 'Portfolio Website',
     description: 'Sleek personal portfolio for law professionals with aesthetic functionality.',
-    image: f3,
+    image: '',
     link: '#',
   },
   {
     title: 'Dubey Misthan Bhandar',
     description: "High-conversion website for one of the region's oldest sweet shops.",
-    image: f4,
+    image: '',
     link: '#',
   },
 ];
