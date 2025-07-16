@@ -1,6 +1,6 @@
 import React from 'react';
 import './Client.css';
-import { Cube } from '../cube/Cube';
+import { Cube } from '../home/cube/Cube';
 
 const client = [
   {

@@ -1,8 +1,8 @@
 import React from 'react'
-import Navbar from './components/navbar/Navbar'
+import Navbar from './components/home/navbar/Navbar'
 import Main from './components/main/Main'
 import './App.css'
-import Services from './components/servicesoverview/Services'
+import Services from './components/home/servicesoverview/Services'
 import Growth from './components/growth/Growth'
 import Products from './components/featuredproducts/Products';
 import Client from './components/clients/Client'
