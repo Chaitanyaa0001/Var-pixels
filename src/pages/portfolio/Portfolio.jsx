@@ -3,10 +3,22 @@ import Navbar from '../../components/navbar/Navbar';
 import Collaborate from '../../components/portfolio/Collaborate';
 import Footer from '../../components/footer/Footer';
 
+// projects pics 
+import HH1 from '../../assets/homepage/HH1.png';
+import HH2 from '../../assets/homepage/HH4.png';
+import PP1 from '../../assets/homepage/PP1.png';
+import PP2 from '../../assets/homepage/PP2.png';
+
+// social pics 
+import S1 from '../../assets/portfolio/S1.png';
+import S2 from '../../assets/portfolio/S2.png';
+import S3 from '../../assets/portfolio/S3.png';
+
 const projects = [
   {
     title: "AntarDarshnam",
     category: "Web Development & Design",
+    image: PP1,
     description:
       "A spiritual wellness platform brought to life through a minimalist design, reflecting peace and mindfulness resulting in increased user engagement and followers.",
     technologies: ["React", "UI/UX Design", "Content Strategy", "Social Media"],
@@ -14,6 +26,7 @@ const projects = [
   {
     title: "The Ayodhya Skates",
     category: "Web Development & Branding",
+    image: HH1,
     description:
       "Complete branding, website, and digital marketing for Ayodhya's premier skating academy, enhancing their online presence and attracting local skating enthusiasts.",
     technologies: ["React", "Node.js", "MongoDB", "Digital Marketing", "Branding"],
@@ -21,6 +34,7 @@ const projects = [
   {
     title: "Dubey Misthan Bhandar",
     category: "E-commerce Development",
+    image: HH2,
     description:
       "Designed and developed a high-conversion, user-friendly website for one of the region's oldest sweet shops, integrating online ordering and local SEO optimization.",
     technologies: ["E-commerce", "SEO", "Online Ordering", "Local Marketing"],
@@ -28,6 +42,7 @@ const projects = [
   {
     title: "Advocate Portfolio Website",
     category: "Portfolio Development",
+    image: PP2,
     description:
       "Crafted a sleek, personal portfolio for law professionals, blending aesthetics with functionality to showcase their work and influence clients.",
     technologies: ["React", "TailwindCSS", "Professional Design", "SEO"],
@@ -38,6 +53,7 @@ const socialMediaCampaigns = [
   {
     title: "The Ayodhya Skates",
     industry: "Sports & Youth Training",
+    image: S1,
     description:
       "Complete social media management for The Ayodhya Skates, a national-level skating academy for children. From content strategy to daily posts and reel production, we've elevated their Instagram and Facebook presence with educational, motivational, and behind-the-scenes content.",
     results: [
@@ -55,6 +71,7 @@ const socialMediaCampaigns = [
   {
     title: "Hurricane Vent",
     industry: "Industrial Ventilation & Skylight Solutions – UAE & Oman",
+    image: S2,
     description:
       "We manage two tailored digital strategies: one for the B2B audience in the UAE and another for the Oman region. Our services include ad campaign design, SEO optimization, and content creation focusing on educating contractors, builders, and factory owners about energy-saving solutions.",
     results: [
@@ -72,6 +89,7 @@ const socialMediaCampaigns = [
   {
     title: "Hurricane Vent LLC",
     industry: "Construction & Engineering Services – Oman",
+    image: S3,
     description:
       "In addition to product promotions, we've positioned Hurricane Vent LLC as a thought leader through expert-level infographics, installation visuals, and carousel content. Our campaign strategy included WhatsApp funneling, inquiry generation, and cross-platform consistency.",
     results: [
@@ -88,8 +106,9 @@ const socialMediaCampaigns = [
   }
 ];
 
-const ProjectCard = ({ title, category, description, technologies }) => (
+const ProjectCard = ({ title, category, description, technologies, image }) => (
   <div className="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition-all">
+    <img src={image} alt={title} className="w-full h-48 object-cover rounded-lg mb-4" />
     <h3 className="text-xl font-bold text-gray-800">{title}</h3>
     <p className="text-sm text-indigo-500 font-medium mb-2">{category}</p>
     <p className="text-gray-600 mb-4">{description}</p>
@@ -103,8 +122,9 @@ const ProjectCard = ({ title, category, description, technologies }) => (
   </div>
 );
 
-const SocialMediaCard = ({ title, industry, description, results, services }) => (
+const SocialMediaCard = ({ title, industry, description, results, services, image }) => (
   <div className="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition-all">
+    <img src={image} alt={title} className="w-full h-48 object-cover rounded-lg mb-4" />
     <h3 className="text-xl font-bold text-gray-800">{title}</h3>
     <p className="text-sm text-indigo-500 font-medium mb-2">{industry}</p>
     <p className="text-gray-600 mb-4">{description}</p>
@@ -165,8 +185,9 @@ const Portfolio = () => {
           ))}
         </div>
       </section>
-      <Collaborate/>
-      <Footer/>
+
+      <Collaborate />
+      <Footer />
     </div>
   );
 };
