@@ -1,25 +1,34 @@
 import React from 'react';
 import Cube from '../cube/Cube';
+import HH1 from '../../../assets/homepage/HH1.png'
+import HH2 from '../../../assets/homepage/HH2.png'
+import HH3 from '../../../assets/homepage/HH3.png'
+import HH4 from '../../../assets/homepage/HH4.png'
+
 
 const projectData = [
   {
     title: 'The Ayodhya Skates',
     description: "Complete branding, website, and digital marketing for Ayodhya's premier skating academy.",
+    image: HH1,
     link: '#',
   },
   {
     title: 'Hurricane Vent',
     description: "Digital Marketing + SEO for industrial audience in UAE & Oman.",
+    image: HH2,
     link: '#',
   },
   {
     title: 'Portfolio Website',
     description: 'Sleek personal portfolio for law professionals with aesthetic functionality.',
+    image:HH3,
     link: '#',
   },
   {
     title: 'Dubey Misthan Bhandar',
     description: "High-conversion website for one of the region's oldest sweet shops.",
+    image:HH4,
     link: '#',
   },
 ];
@@ -55,7 +64,7 @@ const Products = () => {
               key={index}
               className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-2 max-w-xs w-full cursor-pointer"
             >
-              {/* <img src={item.image} alt={item.title} className="w-full h-44 object-cover" /> */}
+              <img src={item.image} alt={item.title} className="w-full h-44 object-cover" />
               <div className="p-4 text-left">
                 <h3 className="text-lg font-semibold mb-1">{item.title}</h3>
                 <p className="text-sm text-gray-600 mb-3">{item.description}</p>

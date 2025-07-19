@@ -9,7 +9,7 @@ const Cta = () => {
         <Cube />
       </div>
       <div className="absolute top-[60%] right-[8%] w-20 h-20 opacity-30 pointer-events-none animate-[floatCube2_10s_ease-in-out_infinite]">
-        <Cube />
+        <Cube />  
       </div>
       <div className="absolute top-[10%] right-[25%] w-20 h-20 opacity-30 pointer-events-none animate-[floatCube3_12s_ease-in-out_infinite]">
         <Cube />
