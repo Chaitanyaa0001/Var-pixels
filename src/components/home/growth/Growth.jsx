@@ -41,7 +41,7 @@ const Growth = () => {
           {growthData.map((item, index) => (
             <div
               key={index}
-              className="w-full max-w-md bg-white rounded-xl shadow-md p-6 cursor-pointer transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+              className="w-full  bg-white rounded-xl shadow-md p-6 cursor-pointer transition duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
               <div className="flex items-center gap-4">
                 <span className="w-3.5 h-3.5 rounded-full bg-blue-500 flex-shrink-0"></span>
