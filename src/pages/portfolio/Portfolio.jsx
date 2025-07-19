@@ -185,7 +185,6 @@ const Portfolio = () => {
           ))}
         </div>
       </section>
-
       <Collaborate />
       <Footer />
     </div>
