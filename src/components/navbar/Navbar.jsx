@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './Navbar.css';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { Link, NavLink } from 'react-router-dom';
 import logo from "../../assets/logo.png";
@@ -10,47 +9,19 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
-  // Active style for NavLink
   const navLinkClass = ({ isActive }) =>
-    isActive ? "navlink active" : "navlink";
+    isActive ? "text-black bg-teal-100 navlink px-4 py-2 rounded-md" : "text-black navlink px-4 py-2 rounded-md hover:bg-cyan-100 hover:text-cyan-800";
 
   return (
-    <nav id="navbar">
-      <div className="container">
-        <div className="Logo">
-          <div className="part1">
-            <img src={logo} alt="logo" style={{ width: '60px', height: '45px', objectFit: 'contain' }} />
-            <h2>Var PIXELS</h2>
-          </div>
+    <nav className="sticky top-0 z-50 bg-white border-b border-cyan-200">
+      <div className="w-[80%] mx-auto py-2 flex justify-between items-center relative">
+        <div className="flex items-center gap-2">
+          <img src={logo} alt="logo" className="w-16 h-12 object-contain" />
+          <h2 className="text-[#4c47e5] text-xl font-semibold">Var PIXELS</h2>
         </div>
 
         {/* Desktop Menu */}
-        <div className="menuitems">
-          <ul>
-            <li><NavLink to="/" className={navLinkClass} onClick={closeMenu}>Home</NavLink></li>
-            <li><NavLink to="/service" className={navLinkClass} onClick={closeMenu}>Services</NavLink></li>
-            <li><NavLink to="/portfolio" className={navLinkClass} onClick={closeMenu}>Portfolio</NavLink></li>
-            <li><NavLink to="/blog" className={navLinkClass} onClick={closeMenu}>Blog</NavLink></li>
-            <li><NavLink to="/about" className={navLinkClass} onClick={closeMenu}>About</NavLink></li>
-            <li><NavLink to="/contact" className={navLinkClass} onClick={closeMenu}>Contact</NavLink></li>
-          </ul>
-        </div>
-
-        {/* Login Buttons */}
-        <div className="login">
-          <Link to="/login"><button className="button1">Login</button></Link>
-          <Link to="/signup"><button className="button2">Signup</button></Link>
-        </div>
-
-        {/* Hamburger Icon */}
-        <div className="menu-icon" onClick={toggleMenu}>
-          {isOpen ? <FaTimes /> : <FaBars />}
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      <div className={`mobile-menu ${isOpen ? 'open' : ''}`}>
-        <ul>
+        <ul className="hidden md:flex gap-5 list-none">
           <li><NavLink to="/" className={navLinkClass} onClick={closeMenu}>Home</NavLink></li>
           <li><NavLink to="/service" className={navLinkClass} onClick={closeMenu}>Services</NavLink></li>
           <li><NavLink to="/portfolio" className={navLinkClass} onClick={closeMenu}>Portfolio</NavLink></li>
@@ -58,9 +29,32 @@ const Navbar = () => {
           <li><NavLink to="/about" className={navLinkClass} onClick={closeMenu}>About</NavLink></li>
           <li><NavLink to="/contact" className={navLinkClass} onClick={closeMenu}>Contact</NavLink></li>
         </ul>
-        <div className="mobile-buttons">
-          <NavLink  to="/login"><button className="button1">Login</button></NavLink>
-          <NavLink  to="/signup"><button className="button2">Signup</button></NavLink>
+
+        {/* Desktop Login Buttons */}
+        <div className="hidden md:flex items-center gap-3">
+          <Link to="/login"><button className="text-blue-600 border border-cyan-200 px-4 py-2 rounded hover:bg-cyan-100">Login</button></Link>
+          <Link to="/signup"><button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Signup</button></Link>
+        </div>
+
+        {/* Hamburger Icon */}
+        <div className="md:hidden text-lg cursor-pointer z-50" onClick={toggleMenu}>
+          {isOpen ? <FaTimes /> : <FaBars />}
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <div className={`md:hidden bg-cyan-50 transition-all overflow-hidden ${isOpen ? 'max-h-screen py-6' : 'max-h-0 py-0'} flex flex-col px-6`}>
+        <ul className="flex flex-col gap-3">
+          <li><NavLink to="/" className={navLinkClass} onClick={closeMenu}>Home</NavLink></li>
+          <li><NavLink to="/service" className={navLinkClass} onClick={closeMenu}>Services</NavLink></li>
+          <li><NavLink to="/portfolio" className={navLinkClass} onClick={closeMenu}>Portfolio</NavLink></li>
+          <li><NavLink to="/blog" className={navLinkClass} onClick={closeMenu}>Blog</NavLink></li>
+          <li><NavLink to="/about" className={navLinkClass} onClick={closeMenu}>About</NavLink></li>
+          <li><NavLink to="/contact" className={navLinkClass} onClick={closeMenu}>Contact</NavLink></li>
+        </ul>
+        <div className="flex flex-col gap-3 mt-4">
+          <Link to="/login"><button className="text-blue-600 border border-cyan-200 w-full py-2 rounded hover:bg-cyan-100">Login</button></Link>
+          <Link to="/signup"><button className="bg-blue-600 text-white w-full py-2 rounded hover:bg-blue-700">Signup</button></Link>
         </div>
       </div>
     </nav>
