@@ -9,7 +9,7 @@ const Contact = () => {
       <Navbar />
 
       <div className="w-[95%] sm:w-[90%] lg:w-[85%] mx-auto flex flex-col">
-        <button className="text-center bg-[#CDF5FD] text-sm text-[#0F1035] font-semibold inline-block px-2 lg:px-0 lg:w-[10%] mx-auto rounded-full mt-16 mb-5">
+        <button className="text-center bg-[#CDF5FD] text-sm text-[#0F1035] font-semibold inline-block px-2 lg:px-0 lg:w-[8%] hover:outline-none hover:bg-[#3B4455] hover:text-blue-400 cursor-pointer mx-auto rounded-full mt-16 mb-5">
           Contact us
         </button>
         <h1 className="text-center text-3xl lg:text-5xl md:text-4xl font-extrabold text-[#0F1035] mb-8">
@@ -17,15 +17,15 @@ const Contact = () => {
         </h1>
 
         <div className="flex flex-col md:flex-row justify-center gap-4 mb-50 text-center">
-          <button className="bg-[#1982FC] text-white px-6 py-2 rounded-lg flex items-center justify-center gap-2">
+          <button className="bg-[#1982FC] text-white px-6 py-2 rounded-lg flex items-center  cursor-pointer justify-center gap-2">
             <FiPhoneCall /> CALL NOW
           </button>
-          <button className="bg-gradient-to-r from-[#6A5ACD] to-[#8A2BE2] text-white px-6 py-2 rounded-lg flex items-center justify-center gap-2 ">
+          <button className="bg-gradient-to-r from-[#6A5ACD] to-[#8A2BE2] text-white px-6 cursor-pointer  py-2 rounded-lg flex items-center justify-center gap-2 ">
             <FiSend /> SEND MESSAGE
           </button>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 w-[70%] mx-auto gap-20 mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2  w-[90%] lg:w-[70%] mx-auto gap-20 mb-20">
           {/* Left Form */}
           <div className="bg-white rounded-xl shadow-lg p-7">
             <h2 className="text-xl font-bold mb-6 text-[#0F1035]">
@@ -78,8 +78,8 @@ const Contact = () => {
           {/* Right Contact Info */}
           <div className="flex flex-col justify-start gap-6 text-[#0F1035]">
             <h2 className="text-xl font-extrabold">Get in Touch</h2>
-            <div className="flex items-center gap-3">
-              <FiMail className="text-white bg-blue-500 text-xl py-2 "/>
+            <div className="flex items-center gap-3 ">
+              <FiMail className="text-white  bg-blue-500 w-[8%] h-[65%] text-2xl p-1 rounded-[6px]  "/>
               <div>
                   <h1>Email</h1>
                   <span className='opacity-70  text-[0.9rem]'>varpixels@gmail.com</span>
@@ -87,7 +87,7 @@ const Contact = () => {
           
             </div>
             <div className="flex items-center gap-3">
-              <FiPhoneCall className="text-blue-500 text-xl" />
+              <FiPhoneCall className="text-white  bg-blue-500 w-[8%] h-[65%] text-xl p-1 rounded-[6px]" />
               <div>
                 <h1>phone Number</h1>
                 <span>+91-7905095656</span>
@@ -95,7 +95,7 @@ const Contact = () => {
              
             </div>
             <div className="flex items-center gap-3">
-              <FiMapPin className="text-blue-500 text-xl" />
+              <FiMapPin className="text-white bg-blue-500 w-[8%] h-[65%] text-xl p-1 rounded-[6px]" />
               <div>
                 <h1>Location</h1>
                 <span>Ayodhya, India</span>
