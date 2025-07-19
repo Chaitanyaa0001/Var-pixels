@@ -1,27 +1,31 @@
 import React from 'react'
 import Navbar from '../../components/navbar/Navbar'
 import Footer from '../../components/footer/Footer';
-
+import A1 from '../../assets/about/A1.jpg'
+import A2 from '../../assets/about/A2.png'
+import A3 from '../../assets/about/A3.png'
+import A4 from '../../assets/about/A4.png'
+import A5 from '../../assets/about/A5.png'
 const team = [
   {
     name: 'Virendra Kumar',
     role: 'Founder & CEO',
-    image: '/images/virendra.png', // Upload your image to public/images/
+    image: A2
   },
   {
     name: 'Riya Kumari',
     role: 'Product Design & Marketing Head',
-    image: '/images/riya.png',
+    image: A3,
   },
   {
     name: 'Divyansh Shrivastava',
     role: 'Technical Lead',
-    image: '/images/divyansh.png',
+    image: A4,
   },
   {
     name: 'Ajay Dubey',
     role: 'AI & ML Specialist',
-    image: '/images/ajay.png',
+    image: A5,
   },
 ];
 
@@ -60,7 +64,7 @@ const About = () => {
         {/* Right Image */}
         <div className="md:w-1/2 mt-10 md:mt-0">
           <img
-            src="/images/team-work.png" // Upload your team image as 'team-work.png'
+            src={A1} 
             alt="Team working"
             className="w-full max-w-md md:max-w-lg rounded-2xl shadow-xl mx-auto"
           />
