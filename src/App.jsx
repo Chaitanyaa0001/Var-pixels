@@ -10,7 +10,9 @@ import Contact from './pages/contact/Contact';
 import Login from './pages/login/Login';
 import Signp from './pages/signup/Signp';
 import Viewdetails from './pages/otherpages/Viewdetails';
-import ServiceDetail from './pages/otherpages/ServiceDetail';
+import ServiceDetail from './pages/otherpages/ServiceDetail'
+import BlogDetail from './pages/otherpages/BlogDetail';
+
 
 
 const App = () => {
@@ -21,6 +23,7 @@ const App = () => {
       <Route path="/services/:slug" element={<ServiceDetail />} />
       <Route path='/portfolio' element={<Portfolio />} />
       <Route path='/blog' element={<Blog />} />
+      <Route path="/blog/:slug" element={<BlogDetail />} />
       <Route path='/about' element={<About />} />
       <Route path='/contact' element={<Contact />} />
       <Route path='/login' element={<Login />} />

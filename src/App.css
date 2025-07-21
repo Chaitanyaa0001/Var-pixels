@@ -1,4 +1,31 @@
 @import "tailwindcss";
+.montserrat-light {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.montserrat-medium {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.montserrat-bold {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.montserrat-black {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
 @keyframes turn {
   from {
     transform: rotate3d(0, 0, 0, 0deg);
@@ -7,6 +34,8 @@
     transform: rotate3d(1, 1, 0, 360deg);
   }
 }
+
+
 @keyframes floatHeroCube {
   0% {
     transform: translateY(0);

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../../components/navbar/Navbar';
 import Footer from '../../components/footer/Footer';
 import B1 from '../../assets/blogs/B1.jpg';
@@ -13,30 +14,30 @@ const Blog = () => {
       category: 'Digital Marketing',
       tagColor: 'bg-teal-100 text-teal-600',
       title: 'The Rise of AI in Digital Marketing',
-      description:
-        'Explore how artificial intelligence is revolutionizing digital marketing and helping businesses...',
+      description: 'Explore how artificial intelligence is revolutionizing digital marketing and helping businesses...',
       date: '📅 January 10, 2025',
       readTime: '🕒 6 min read',
+      slug: 'ai-digital-marketing'
     },
     {
       image: B3,
       category: 'Mobile Development',
       tagColor: 'bg-green-100 text-green-600',
       title: 'Mobile-First Design: Best Practices',
-      description:
-        'Learn the essential principles of mobile-first design and how to create seamless UX...',
+      description: 'Learn the essential principles of mobile-first design and how to create seamless UX...',
       date: '📅 January 5, 2025',
       readTime: '🕒 5 min read',
+      slug: 'mobile-first-design'
     },
     {
       image: B4,
       category: 'SEO',
       tagColor: 'bg-indigo-100 text-indigo-600',
       title: 'SEO Strategies for 2025',
-      description:
-        'Stay ahead of the competition with the latest SEO strategies and tools...',
+      description: 'Stay ahead of the competition with the latest SEO strategies and tools...',
       date: '📅 December 28, 2024',
       readTime: '🕒 6 min read',
+      slug: 'seo-strategies-2025'
     },
   ];
 
@@ -76,12 +77,12 @@ const Blog = () => {
           </p>
           <div className="text-sm text-gray-500 flex items-center justify-between">
             <p>📅 January 13, 2025 · 🕒 5 min read · ✍️ VAR PIXELS Team</p>
-            <a
-              href="#"
+            <Link
+              to="/blog/web-design-trends-2025"
               className="text-sm text-white bg-blue-600 px-3 py-1 rounded hover:bg-blue-700"
             >
               Read More →
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -107,12 +108,12 @@ const Blog = () => {
                 <span>{article.date}</span>
                 <span>{article.readTime}</span>
               </div>
-              <a
-                href="#"
+              <Link
+                to={`/blog/${article.slug}`}
                 className="text-sm text-blue-600 mt-2 inline-block hover:underline"
               >
                 Read More →
-              </a>
+              </Link>
             </div>
           </div>
         ))}
