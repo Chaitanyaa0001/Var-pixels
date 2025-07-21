@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../../components/navbar/Navbar';
 import {
   RiGlobalLine,
@@ -15,37 +16,43 @@ const services = [
     icon: <RiGlobalLine size={32} className="text-cyan-500" />,
     title: 'Web Design & Development',
     description: 'Fast, secure, SEO-ready websites tailored to your brand.',
-    features: ['Responsive Design', 'E-commerce Solutions', 'CMS Integration', 'Performance Optimization']
+    features: ['Responsive Design', 'E-commerce Solutions', 'CMS Integration', 'Performance Optimization'],
+    slug: 'web-development'
   },
   {
     icon: <RiSmartphoneLine size={32} className="text-cyan-500" />,
     title: 'App Development',
     description: 'Mobile-first interfaces designed for user delight.',
-    features: ['iOS & Android Apps', 'Cross-platform Solutions', 'UI/UX Design', 'App Store Optimization']
+    features: ['iOS & Android Apps', 'Cross-platform Solutions', 'UI/UX Design', 'App Store Optimization'],
+    slug: 'app-development'
   },
   {
     icon: <RiBarChartGroupedLine size={32} className="text-cyan-500" />,
     title: 'Digital Marketing & Strategy',
     description: 'Campaigns that bring traffic, leads, and conversions.',
-    features: ['Social Media Marketing', 'Content Strategy', 'PPC Campaigns', 'Analytics & Reporting']
+    features: ['Social Media Marketing', 'Content Strategy', 'PPC Campaigns', 'Analytics & Reporting'],
+    slug: 'digital-marketing'
   },
   {
     icon: <RiBrushLine size={32} className="text-cyan-500" />,
     title: 'Branding & SEO',
     description: 'Logo, brand voice, and visuals that stick in people\'s minds.',
-    features: ['Brand Identity', 'Logo Design', 'SEO Optimization', 'Brand Guidelines']
+    features: ['Brand Identity', 'Logo Design', 'SEO Optimization', 'Brand Guidelines'],
+    slug: 'branding-seo'
   },
   {
     icon: <RiGroupLine size={32} className="text-cyan-500" />,
     title: 'Social Media Management',
     description: 'Strategic social media experiences that help your brand grow.',
-    features: ['Branded Post & Reel Design', 'Monthly Content Calendars', 'Meta Ads Setup', 'Analytics & Reports']
+    features: ['Branded Post & Reel Design', 'Monthly Content Calendars', 'Meta Ads Setup', 'Analytics & Reports'],
+    slug: 'social-media'
   },
   {
     icon: <RiCpuLine size={32} className="text-cyan-500" />,
     title: 'AI/ML Solutions',
     description: 'Smart tech that works for your business.',
-    features: ['Custom AI Models', 'Data Analytics', 'Automation', 'Machine Learning']
+    features: ['Custom AI Models', 'Data Analytics', 'Automation', 'Machine Learning'],
+    slug: 'ai-ml-solutions'
   },
 ];
 
@@ -83,9 +90,12 @@ const Servicepage = () => {
                 </li>
               ))}
             </ul>
-            <button className="mt-6 w-full py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:opacity-90 transition">
+            <Link 
+              to={`/services/${service.slug}`}
+              className="mt-6 w-full py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:opacity-90 transition block text-center"
+            >
               Learn More →
-            </button>
+            </Link>
           </div>
         ))}
       </div>
