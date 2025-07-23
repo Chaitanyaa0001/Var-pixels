@@ -10,24 +10,27 @@ const Navbar = () => {
   const closeMenu = () => setIsOpen(false);
 
   const navLinkClass = ({ isActive }) =>
-    isActive ? "text-black bg-teal-100 navlink px-4 py-2 rounded-md" : "text-black navlink px-4 py-2 rounded-md hover:bg-cyan-100 hover:text-cyan-800";
+  isActive
+    ? "bg-teal-100 text-blue-600 navlink px-4 py-2 rounded-md"
+    : "text-[#1E3A8A] navlink px-4 py-2 rounded-md hover:bg-cyan-100 hover:text-cyan-800";
+
 
   return (
     <nav className="sticky top-0 z-50 bg-white border-b border-cyan-200">
       <div className="w-[80%] mx-auto py-2 flex justify-between items-center relative">
         <div className="flex items-center gap-2">
           <img src={logo} alt="logo" className="w-16 h-12 object-contain" />
-          <h2 className="text-[#4c47e5] text-xl font-semibold">Var PIXELS</h2>
+          <h2 className="text-[#4c47e5] text-xl font-bold">Var PIXELS</h2>
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-5 list-none">
-          <li><NavLink to="/" className={navLinkClass} onClick={closeMenu}>Home</NavLink></li>
-          <li><NavLink to="/service" className={navLinkClass} onClick={closeMenu}>Services</NavLink></li>
-          <li><NavLink to="/portfolio" className={navLinkClass} onClick={closeMenu}>Portfolio</NavLink></li>
-          <li><NavLink to="/blog" className={navLinkClass} onClick={closeMenu}>Blog</NavLink></li>
-          <li><NavLink to="/about" className={navLinkClass} onClick={closeMenu}>About</NavLink></li>
-          <li><NavLink to="/contact" className={navLinkClass} onClick={closeMenu}>Contact</NavLink></li>
+        <ul className="hidden md:flex gap-2 list-none text-[0.9rem]  text-blue-600 font-semibold">
+          <li ><NavLink to="/" className={navLinkClass} onClick={closeMenu}>Home</NavLink></li>
+          <li ><NavLink to="/service" className={navLinkClass} onClick={closeMenu}>Services</NavLink></li>
+          <li ><NavLink to="/portfolio" className={navLinkClass} onClick={closeMenu}>Portfolio</NavLink></li>
+          <li ><NavLink to="/blog" className={navLinkClass} onClick={closeMenu}>Blog</NavLink></li>
+          <li ><NavLink to="/about" className={navLinkClass} onClick={closeMenu}>About</NavLink></li>
+          <li ><NavLink to="/contact" className={navLinkClass} onClick={closeMenu}>Contact</NavLink></li>
         </ul>
 
         {/* Desktop Login Buttons */}

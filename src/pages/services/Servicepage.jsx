@@ -78,25 +78,33 @@ const Servicepage = () => {
       {/* Service Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6 md:px-12 lg:px-24 py-12">
         {services.map((service, idx) => (
-          <div key={idx} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
-            <div className="mb-4">{service.icon}</div>
-            <h3 className="text-xl font-semibold text-gray-800">{service.title}</h3>
-            <p className="text-gray-600 mt-2">{service.description}</p>
-            <ul className="mt-4 space-y-2 text-sm text-gray-700">
-              {service.features.map((feature, i) => (
-                <li key={i} className="flex items-center gap-2">
-                  <span className="text-cyan-500">✔</span>
-                  {feature}
-                </li>
-              ))}
-            </ul>
-            <Link 
-              to={`/services/${service.slug}`}
-              className="mt-6 w-full py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:opacity-90 transition block text-center"
-            >
-              Learn More →
-            </Link>
-          </div>
+          <div
+  key={idx}
+  className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition flex flex-col justify-between"
+>
+  <div>
+    <div className="mb-4">{service.icon}</div>
+    <h3 className="text-xl font-semibold text-gray-800">{service.title}</h3>
+    <p className="text-gray-600 mt-2">{service.description}</p>
+    <ul className="mt-4 space-y-2 text-sm text-gray-700">
+      {service.features.map((feature, i) => (
+        <li key={i} className="flex items-center gap-2">
+          <span className="text-cyan-500">✔</span>
+          {feature}
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  {/* Aligned Learn More button */}
+  <Link
+    to={`/services/${service.slug}`}
+    className="mt-6 w-full py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:opacity-90 transition text-center"
+  >
+    Learn More →
+  </Link>
+</div>
+
         ))}
       </div>
       <Footer/>

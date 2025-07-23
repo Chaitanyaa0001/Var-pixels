@@ -25,12 +25,30 @@ import h1 from '../../assets/crousal/hurricant/h1.png';
 import h2 from '../../assets/crousal/hurricant/h2.png';
 import h3 from '../../assets/crousal/hurricant/h3.jpg';
 
+import hehe1 from '../../assets/crousal/apardarshnam/hehe1.png'
+import hehe2 from '../../assets/crousal/apardarshnam/hehe2.png'
+import hehe3 from '../../assets/crousal/apardarshnam/hehe3.png'
+import hehe4 from '../../assets/crousal/apardarshnam/hehe4.png'
+import hehe5 from '../../assets/crousal/apardarshnam/hehe5.png'
+
 import p1 from '../../assets/crousal/portfolioc/p1.png';
 import p2 from '../../assets/crousal/portfolioc/p2.png';
 import p3 from '../../assets/crousal/portfolioc/p3.png';
 import Featurecard from '../../components/Featurecard';
 
+import PP1 from '../../assets/homepage/PP1.png'
+
 const projectData = [
+  {
+    slug: 'antar-darshnam',
+    title: "AntarDarshnam",
+    description: "Spiritual wellness platform with minimalist design reflecting peace and mindfulness.",
+    image: PP1,
+    client:'Antar Darshnam',
+    duration: '3 months',
+    year:'2024',
+    tag:'Web developnment and design'
+  },
   {
     slug: 'ayodhya-skates',
     title: 'The Ayodhya Skates',
@@ -78,6 +96,7 @@ const imageMap = {
   'hurricane-vent': [h1, h2, h3],
   'portfolio-website': [p1, p2, p3],
   'dubey-misthan-bhandar': [b1, b2, b3, b4, b5],
+  'antar-darshnam' : [hehe1,hehe2,hehe3,hehe4,hehe5]
 };
 
 // Updated to exactly 4 cards per project with combined Technologies & Services
@@ -142,6 +161,27 @@ const featureCards = {
       lines: `Web Development, UI/UX Design, SEO Optimization, Mobile Optimization`,
     },
   ],
+   'antar-darshnam': [
+    {
+      title: 'The Challenge',
+      content: `AntarDarshnam needed a digital platform that would embody spiritual wellness and mindfulness while providing practical functionality for their community and content.`,
+    },
+    {
+      title: 'Our Solution',
+      content: `We created a serene, minimalist website that reflects the spiritual nature of the platform. The design emphasizes peace and mindfulness through careful use of whitespace, calming colors, and intuitive navigation that guides users on their spiritual journey.`,
+    },
+    {
+      title: 'Results',
+      content: `• Peaceful user experience achieved • Increased community engagement • Mobile-optimized meditation platform • SEO-optimized for spiritual wellness keywords`,
+    },
+    {
+      title: 'Technologies Used',
+      content: `React, Meditation Tools, Community platform, Mobile First `,
+      serviceProvided: 'Services Provided',
+      lines: `Web Development, Spritual Branding ,Community Building , Mobile Optimization`,
+    },
+  ],
+
   'dubey-misthan-bhandar': [
     {
       title: 'The Challenge',
@@ -161,7 +201,9 @@ const featureCards = {
       serviceProvided: 'Services Provided',
       lines: `E-commerce Development, Brand Preservation, Digital Marketing, Order Management`,
     },
+    
   ],
+  
 };
 
 

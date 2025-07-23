@@ -24,7 +24,7 @@ const Main = () => {
 
       {/* Hero Content */}
       <div className="relative z-30 max-w-3xl mx-auto">
-        <h5 className="inline-block text-sm font-light px-2 py-1 rounded-xl border border-cyan-500 bg-cyan-100 mb-3 hover:bg-[#3C4455] hover:text-cyan-400 cursor-pointer transition-colors">
+        <h5 className="inline-block text-[0.8rem] font-semibold px-2  rounded-xl border border-cyan-500 bg-cyan-100 mb-3 hover:bg-[#3C4455] hover:text-cyan-400 cursor-pointer transition-colors">
           Digital Innovation Partner
         </h5>
         <h2 className="text-4xl md:text-5xl font-bold leading-snug">
