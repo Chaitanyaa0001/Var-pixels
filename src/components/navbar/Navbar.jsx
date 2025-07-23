@@ -37,17 +37,17 @@ const Navbar = () => {
 
         {/* Desktop Login Buttons */}
        <div className="hidden md:flex items-center gap-3">
-  <Link to="/login">
-    <button className="text-blue-600 border border-cyan-200 px-4 py-2 cursor-pointer  rounded hover:bg-cyan-100 flex items-center gap-2">
-      <FiLogIn /> Login
-    </button>
-  </Link>
-  <Link to="/signup">
-    <button className="bg-gradient-to-r from-blue-500 to-cyan-500 cursor-pointer text-white px-4 py-2 rounded hover:from-blue-600 hover:to-cyan-600 flex items-center gap-2">
-      <FiUserPlus /> Signup
-    </button>
-  </Link>
-</div>
+          <Link to="/login">
+            <button className="text-blue-600 border border-cyan-200 px-4 py-2 cursor-pointer  rounded hover:bg-cyan-100 flex items-center gap-2">
+              <FiLogIn /> Login
+            </button>
+          </Link>
+          <Link to="/signup">
+            <button className="bg-gradient-to-r from-blue-500 to-cyan-500 cursor-pointer text-white px-4 py-2 rounded hover:from-blue-600 hover:to-cyan-600 flex items-center gap-2">
+              <FiUserPlus /> Signup
+            </button>
+          </Link>
+        </div>
 
 
         {/* Hamburger Icon */}
@@ -66,9 +66,17 @@ const Navbar = () => {
           <li><NavLink to="/about" className={navLinkClass} onClick={closeMenu}>About</NavLink></li>
           <li><NavLink to="/contact" className={navLinkClass} onClick={closeMenu}>Contact</NavLink></li>
         </ul>
-        <div className="flex flex-col gap-3 mt-4">
-          <Link to="/login"><button className="text-blue-600 border border-cyan-200 w-full py-2 rounded hover:bg-cyan-100">Login</button></Link>
-          <Link to="/signup"><button className="bg-blue-600 text-white w-full py-2 rounded hover:bg-blue-700">Signup</button></Link>
+        <div className="hidden md:flex items-center gap-3">
+          <Link to="/login">
+            <button className="text-blue-600 border border-cyan-200 px-4 py-2 cursor-pointer  rounded hover:bg-cyan-100 flex items-center gap-2">
+              <FiLogIn /> Login
+            </button>
+          </Link>
+          <Link to="/signup">
+            <button className="bg-gradient-to-r from-blue-500 to-cyan-500 cursor-pointer text-white px-4 py-2 rounded hover:from-blue-600 hover:to-cyan-600 flex items-center gap-2">
+              <FiUserPlus /> Signup
+            </button>
+          </Link>
         </div>
       </div>
     </nav>
