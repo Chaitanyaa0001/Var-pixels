@@ -1,4 +1,5 @@
 import React from 'react';
+import { FiArrowRight, FiPhoneCall } from 'react-icons/fi'; // Importing icons
 import Cube from '../cube/Cube';
 
 const Main = () => {
@@ -13,9 +14,6 @@ const Main = () => {
 
       {/* Floating Cubes */}
       <div className="absolute top-[5%] left-[10%] w-[80px] h-[80px] opacity-40 pointer-events-none animate-[floatHeroCube_6s_ease-in-out_infinite]">
-        <Cube />
-      </div>
-      <div className="absolute bottom-[10%] right-[15%] w-[80px] h-[80px] opacity-40 pointer-events-none animate-[floatHeroCube_8s_ease-in-out_infinite]">
         <Cube />
       </div>
       <div className="absolute top-[60%] left-[40%] w-[80px] h-[80px] opacity-40 pointer-events-none animate-[floatHeroCube_7s_ease-in-out_infinite]">
@@ -34,10 +32,12 @@ const Main = () => {
           Websites, Apps, AI/ML Solutions, SEO & Digital Marketing that make your brand unforgettable.
         </p>
         <div className="mt-8 flex justify-center flex-wrap gap-4">
-          <button className="px-6 py-3 font-semibold rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-blue-500 hover:to-indigo-500 transition">
+          <button className="px-6 py-3 font-semibold rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-blue-500 hover:to-indigo-500 transition flex items-center gap-2 shadow-md hover:shadow-lg">
+            <FiArrowRight className="text-lg" />
             Get Started
           </button>
-          <button className="px-6 py-3 font-semibold rounded-md bg-green-600 text-white hover:bg-green-700 transition">
+          <button className="px-6 py-3 font-semibold rounded-md bg-gradient-to-r from-purple-500 to-indigo-500 text-white hover:from-indigo-500 hover:to-blue-600 transition flex items-center gap-2 shadow-md hover:shadow-lg">
+            <FiPhoneCall className="text-lg" />
             Contact Us
           </button>
         </div>
