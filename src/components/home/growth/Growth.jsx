@@ -16,7 +16,7 @@ const Growth = () => {
         <Cube />
       </div>
       <div className="absolute bottom-[8%] right-[4%] w-[80px] h-[80px] opacity-50 pointer-events-none z-[1] animate-[floatCube_8s_ease-in-out_infinite]">
-        <Cube />
+        <Cube />  
       </div>
 
       {/* Floating Circles */}

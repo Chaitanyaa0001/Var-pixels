@@ -11,8 +11,9 @@ import {
   RiCpuLine,
   RiCheckLine
 } from 'react-icons/ri';
+import ProcessSection from '../../components/process/Processsection';
 
-// Service data with detailed information
+
 const serviceData = {
   'web-development': {
     icon: <RiGlobalLine size={48} className="text-cyan-500" />,
@@ -259,7 +260,7 @@ const ServiceDetail = () => {
           </div>
         </div>
       </div>
-      
+      <ProcessSection/>
       <Footer />
     </div>
   );
