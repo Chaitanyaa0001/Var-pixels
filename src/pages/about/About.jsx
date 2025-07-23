@@ -6,6 +6,9 @@ import A2 from '../../assets/about/A2.png'
 import A3 from '../../assets/about/A3.png'
 import A4 from '../../assets/about/A4.png'
 import A5 from '../../assets/about/A5.png'
+import ReadyToWorkBanner from '../../components/ReadyToWorkBanner';
+
+
 const team = [
   {
     name: 'Virendra Kumar',
@@ -28,6 +31,8 @@ const team = [
     image: A5,
   },
 ];
+
+
 
 const About = () => {
   return (
@@ -100,6 +105,10 @@ const About = () => {
           ))}
         </div>
       </section>
+
+     
+      <ReadyToWorkBanner />
+
       <Footer/>
     </div>
   )

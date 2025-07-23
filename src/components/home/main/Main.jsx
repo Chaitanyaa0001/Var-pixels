@@ -1,8 +1,16 @@
 import React from 'react';
 import { FiArrowRight, FiPhoneCall } from 'react-icons/fi'; // Importing icons
 import Cube from '../cube/Cube';
+import { Link } from 'react-router-dom';
+
 
 const Main = () => {
+  const phoneNumber = '+917905095656'; // Phone number for calling
+
+  const handleCallClick = () => {
+    window.open(`tel:${phoneNumber}`, '_self');
+  };
+
   return (
     <div className="relative bg-[#f0fdfd] py-24 px-5 overflow-hidden text-center z-20">
       {/* Background Circles Top */}
@@ -12,13 +20,21 @@ const Main = () => {
         <div className="w-0 h-0 border-l-[10px] border-r-[10px] border-b-[18px] border-transparent border-b-yellow-300" />
       </div>
 
+
       {/* Floating Cubes */}
       <div className="absolute top-[5%] left-[10%] w-[80px] h-[80px] opacity-40 pointer-events-none animate-[floatHeroCube_6s_ease-in-out_infinite]">
         <Cube />
       </div>
-      <div className="absolute top-[60%] left-[40%] w-[80px] h-[80px] opacity-40 pointer-events-none animate-[floatHeroCube_7s_ease-in-out_infinite]">
+      <div className="absolute bottom-[10%] right-[10%] w-[80px] h-[80px] opacity-40 pointer-events-none animate-[floatHeroCube_6s_ease-in-out_infinite]">
         <Cube />
       </div>
+      <div className="absolute top-[10%] right-[10%] w-[80px] h-[80px] opacity-40 pointer-events-none animate-[floatHeroCube_6s_ease-in-out_infinite]">
+        <Cube />
+      </div>
+      <div className="absolute top-[50%] left-[40%] w-[80px] h-[80px] opacity-40 pointer-events-none animate-[floatHeroCube_7s_ease-in-out_infinite]">
+        <Cube />
+      </div>
+
 
       {/* Hero Content */}
       <div className="relative z-30 max-w-3xl mx-auto">
@@ -32,16 +48,22 @@ const Main = () => {
           Websites, Apps, AI/ML Solutions, SEO & Digital Marketing that make your brand unforgettable.
         </p>
         <div className="mt-8 flex justify-center flex-wrap gap-4">
+          <Link to='/service'>
           <button className="px-6 py-3 font-semibold rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-blue-500 hover:to-indigo-500 transition flex items-center gap-2 shadow-md hover:shadow-lg">
             <FiArrowRight className="text-lg" />
             Get Started
           </button>
-          <button className="px-6 py-3 font-semibold rounded-md bg-gradient-to-r from-purple-500 to-indigo-500 text-white hover:from-indigo-500 hover:to-blue-600 transition flex items-center gap-2 shadow-md hover:shadow-lg">
+          </Link>
+          <button 
+            onClick={handleCallClick}
+            className="px-6 py-3 font-semibold rounded-md bg-gradient-to-r from-purple-500 to-indigo-500 text-white hover:from-indigo-500 hover:to-blue-600 transition flex items-center gap-2 shadow-md hover:shadow-lg"
+          >
             <FiPhoneCall className="text-lg" />
             Contact Us
           </button>
         </div>
       </div>
+
 
       {/* Background Circles Bottom */}
       <div className="absolute bottom-[12%] left-[7%] w-[50px] h-[50px] rounded-full border-2 border-sky-500 opacity-50 animate-[floatCircle_6s_ease-in-out_infinite]" />
@@ -52,5 +74,6 @@ const Main = () => {
     </div>
   );
 };
+
 
 export default Main;

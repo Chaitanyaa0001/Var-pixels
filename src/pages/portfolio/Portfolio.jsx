@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaRocket, FaStar, FaUsers, FaTools } from 'react-icons/fa'
 
 import Navbar from '../../components/navbar/Navbar';
 import Collaborate from '../../components/portfolio/Collaborate';
@@ -142,6 +143,55 @@ const SocialMediaCard = ({ title, industry, description, results, services, imag
   </div>
 );
 
+const SuccessStoriesBanner = () => {
+  return (
+    <div className="bg-gradient-to-r from-blue-500 via-blue-600 to-purple-600 py-16 px-6">
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-white text-3xl md:text-4xl font-bold mb-4">
+          Project Success Stories
+        </h2>
+        <p className="text-blue-100 text-lg mb-12 max-w-2xl mx-auto">
+          Numbers that speak for our expertise and client satisfaction
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="text-center">
+            <div className="mb-4">
+              <FaRocket className="text-4xl text-orange-400 mx-auto" />
+            </div>
+            <h3 className="text-white text-4xl font-bold mb-2">50+</h3>
+            <p className="text-blue-100">Projects Completed</p>
+          </div>
+
+          <div className="text-center">
+            <div className="mb-4">
+              <FaStar className="text-4xl text-yellow-400 mx-auto" />
+            </div>
+            <h3 className="text-white text-4xl font-bold mb-2">98%</h3>
+            <p className="text-blue-100">Client Satisfaction</p>
+          </div>
+
+          <div className="text-center">
+            <div className="mb-4">
+              <FaUsers className="text-4xl text-red-400 mx-auto" />
+            </div>
+            <h3 className="text-white text-4xl font-bold mb-2">25+</h3>
+            <p className="text-blue-100">Happy Clients</p>
+          </div>
+
+          <div className="text-center">
+            <div className="mb-4">
+              <FaTools className="text-4xl text-gray-300 mx-auto" />
+            </div>
+            <h3 className="text-white text-4xl font-bold mb-2">24/7</h3>
+            <p className="text-blue-100">Support Available</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Portfolio = () => (
   <div className="bg-[#f0faff] min-h-screen text-gray-800">
     <Navbar />
@@ -174,6 +224,9 @@ const Portfolio = () => (
         ))}
       </div>
     </section>
+
+    {/* Success Stories Banner */}
+    <SuccessStoriesBanner />
 
     <Collaborate />
     <Footer />

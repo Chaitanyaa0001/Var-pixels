@@ -1,11 +1,29 @@
 import React from 'react';
 
 const Featurecard = ({ title, content, serviceProvided, lines }) => {
-  const technologies = title === 'Technologies Used' 
-    ? content?.split(' ').filter(tech => tech.trim()) || []
-    : [];
-    
-  const services = lines?.split(',').filter(service => service.trim()) || [];
+  const technologies =
+    title === 'Technologies Used'
+      ? content?.split(',').filter((tech) => tech.trim()) || []
+      : [];
+
+  const services = lines?.split(',').filter((service) => service.trim()) || [];
+
+  // Function to render bullet points as list if present
+  const renderContent = (text) => {
+    if (text.includes('•') || text.includes('\n')) {
+      return (
+        <ul className="list-disc list-inside text-gray-700 space-y-1">
+          {text
+            .split(/•|\n/)
+            .filter((item) => item.trim())
+            .map((item, idx) => (
+              <li key={idx}>{item.trim()}</li>
+            ))}
+        </ul>
+      );
+    }
+    return <p className="text-gray-700">{text}</p>;
+  };
 
   return (
     <div className="bg-white rounded-xl shadow-md p-6 my-7 hover:shadow-lg transition">
@@ -14,7 +32,7 @@ const Featurecard = ({ title, content, serviceProvided, lines }) => {
       {/* Show content for non-technology cards, or show technologies as tags */}
       {title !== 'Technologies Used' ? (
         <div className="p-4 rounded-md mb-4">
-          <p className="text-gray-700 whitespace-pre-line">{content}</p>
+          {renderContent(content)}
         </div>
       ) : (
         <div className="mb-4">
@@ -34,7 +52,9 @@ const Featurecard = ({ title, content, serviceProvided, lines }) => {
       {/* Services Provided section */}
       {serviceProvided && services.length > 0 && (
         <>
-          <h4 className="text-lg font-semibold text-blue-600 mb-3">{serviceProvided}</h4>
+          <h4 className="text-lg font-semibold text-blue-600 mb-3">
+            {serviceProvided}
+          </h4>
           <div className="flex flex-wrap gap-2">
             {services.map((service, idx) => (
               <span

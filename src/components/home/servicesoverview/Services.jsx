@@ -6,6 +6,7 @@ import {
   RiBrushLine,
   RiCpuLine,
 } from 'react-icons/ri';
+import { Link } from 'react-router-dom';
 
 const serviceData = [
   {
@@ -76,9 +77,11 @@ const Services = () => {
 
       {/* CTA Button */}
       <div className="mt-12">
-        <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 px-6 rounded-lg text-base font-medium transition hover:from-blue-600 hover:to-indigo-600">
-          Explore Services →
-        </button>
+        <Link to ='/service'>
+          <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 px-6 rounded-lg text-base font-medium transition hover:from-blue-600 hover:to-indigo-600">
+            Explore Services →
+          </button>
+        </Link>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Collaborate = () => {
   return (
@@ -34,12 +35,16 @@ const Collaborate = () => {
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <Link to='/contact'>
           <button className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-medium transition-colors">
             Start Your Project
           </button>
+          </Link>
+          <Link to='/service'>
           <button className="px-6 py-3 border border-indigo-600 hover:bg-indigo-100 text-indigo-600 rounded-lg font-medium transition-colors">
             View Our Services
           </button>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Cube from '../cube/Cube';
+import { Link } from 'react-router-dom';
 
 const Cta = () => {
   return (
@@ -22,9 +23,11 @@ const Cta = () => {
       <p className="text-lg mb-6">
         Ready to transform your digital presence? Let's discuss your project.
       </p>
+      <Link to='/contact'>
       <button className="bg-white text-cyan-500 px-6 py-3 font-semibold rounded-lg text-base transition duration-300 hover:bg-slate-100">
         Start Your Project <span>&rarr;</span>
       </button>
+      </Link>
     </div>
   );
 };

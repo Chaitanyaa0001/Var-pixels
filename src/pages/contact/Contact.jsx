@@ -4,6 +4,17 @@ import { FiPhoneCall, FiSend, FiMail, FiMapPin } from 'react-icons/fi';
 import Footer from '../../components/footer/Footer';
 
 const Contact = () => {
+  const phoneNumber = '+917905095656'; 
+  const whatsappNumber = '917905095656'; 
+
+  const handleCallClick = () => {
+    window.open(`tel:${phoneNumber}`, '_self');
+  };
+
+  const handleWhatsAppClick = () => {
+    window.open(`https://wa.me/${whatsappNumber}`, '_blank');
+  };
+
   return (
     <div className="bg-[#EDF4FF] min-h-screen">
       <Navbar />
@@ -17,15 +28,21 @@ const Contact = () => {
         </h1>
 
         <div className="flex flex-col md:flex-row justify-center gap-4 mb-50 text-center">
-          <button className="bg-[#1982FC] text-white px-6 py-2 rounded-lg flex items-center  cursor-pointer justify-center gap-2">
+          <button 
+            onClick={handleCallClick}
+            className="bg-[#1982FC] text-white px-6 py-2 rounded-lg flex items-center cursor-pointer justify-center gap-2"
+          >
             <FiPhoneCall /> CALL NOW
           </button>
-          <button className="bg-gradient-to-r from-[#6A5ACD] to-[#8A2BE2] text-white px-6 cursor-pointer  py-2 rounded-lg flex items-center justify-center gap-2 ">
+          <button 
+            onClick={handleWhatsAppClick}
+            className="bg-gradient-to-r from-[#6A5ACD] to-[#8A2BE2] text-white px-6 cursor-pointer py-2 rounded-lg flex items-center justify-center gap-2 "
+          >
             <FiSend /> SEND MESSAGE
           </button>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2  w-[90%] lg:w-[70%] mx-auto gap-20 mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 w-[90%] lg:w-[70%] mx-auto gap-20 mb-20">
           {/* Left Form */}
           <div className="bg-white rounded-xl shadow-lg p-7">
             <h2 className="text-xl font-bold mb-6 text-[#0F1035]">
@@ -79,20 +96,18 @@ const Contact = () => {
           <div className="flex flex-col justify-start gap-6 text-[#0F1035]">
             <h2 className="text-xl font-extrabold">Get in Touch</h2>
             <div className="flex items-center gap-3 ">
-              <FiMail className="text-white  bg-blue-500 w-[8%] h-[65%] text-2xl p-1 rounded-[6px]  "/>
+              <FiMail className="text-white bg-blue-500 w-[8%] h-[65%] text-2xl p-1 rounded-[6px] "/>
               <div>
-                  <h1>Email</h1>
-                  <span className='opacity-70  text-[0.9rem]'>varpixels@gmail.com</span>
+                <h1>Email</h1>
+                <span className='opacity-70 text-[0.9rem]'>varpixels@gmail.com</span>
               </div>
-          
             </div>
             <div className="flex items-center gap-3">
-              <FiPhoneCall className="text-white  bg-blue-500 w-[8%] h-[65%] text-xl p-1 rounded-[6px]" />
+              <FiPhoneCall className="text-white bg-blue-500 w-[8%] h-[65%] text-xl p-1 rounded-[6px]" />
               <div>
                 <h1>phone Number</h1>
                 <span>+91-7905095656</span>
               </div>
-             
             </div>
             <div className="flex items-center gap-3">
               <FiMapPin className="text-white bg-blue-500 w-[8%] h-[65%] text-xl p-1 rounded-[6px]" />

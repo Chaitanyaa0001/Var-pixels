@@ -79,9 +79,11 @@ const Products = () => {
 
         {/* Button */}
         <div className="mt-12">
-          <button className="bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white py-3 px-6 rounded-lg text-base font-medium transition">
+          <Link to='/portfolio'>
+          <button className="bg-gradient-to-r from-blue-500 to-indigo-500 cursor-pointer hover:from-blue-600 hover:to-indigo-600 text-white py-3 px-6 rounded-lg text-base font-medium transition">
             View Full Portfolio
           </button>
+          </Link>
         </div>
       </div>
     </div>

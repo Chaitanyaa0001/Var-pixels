@@ -112,13 +112,13 @@ const featureCards = {
     },
     {
       title: 'Results',
-      content: `• 300% increase in online inquiries • 50+ new student registrations within first month • Established strong social media presence • Professional brand recognition in the local market`,
+      content: `• 300% increase in online inquiries\n• 50+ new student registrations within first month\n • Established strong social media presence\n • Professional brand recognition in the local market`,
     },
     {
       title: 'Technologies Used',
       content: `React,Node.js, MongoDB, Tailwind CSS`,
       serviceProvided: 'Services Provided',
-      lines: `Brand Identity, Web Development, Digital Marketing, SEO Optimization`,
+      lines: `Brand Identity,Web Development,Digital Marketing,SEO Optimization`,
     },
   ],
   'hurricane-vent': [
@@ -132,13 +132,13 @@ const featureCards = {
     },
     {
       title: 'Results',
-      content: `• 200% increase in qualified leads • First page ranking for 15+ industry keywords • Expanded market reach in UAE & Oman • Improved brand recognition in industrial sector`,
+      content: `• 200% increase in qualified leads\n • First page ranking for 15+ industry keywords\n • Expanded market reach in UAE & Oman\n • Improved brand recognition in industrial sector`,
     },
     {
       title: 'Technologies Used',
       content: `Google Ads SEO Tools Analytics Social Media`,
       serviceProvided: 'Services Provided',
-      lines: `Digital Marketing, SEO Optimization, Lead Generation, Market Analysis`,
+      lines: `Digital Marketing,SEO Optimization,Lead Generation,Market Analysis`,
     }
   ],
   'portfolio-website': [
@@ -152,13 +152,13 @@ const featureCards = {
     },
     {
       title: 'Results',
-      content: `• Professional online presence established • Increased client inquiries by 150% • Mobile-responsive design • SEO-optimized for legal keywords`,
+      content: `• Professional online presence established\n • Increased client inquiries by 150%\n • Mobile-responsive design\n • SEO-optimized for legal keywords`,
     },
     {
       title: 'Technologies Used',
       content: `React Tailwind CSS TypeScript Responsive Design`,
       serviceProvided: 'Services Provided',
-      lines: `Web Development, UI/UX Design, SEO Optimization, Mobile Optimization`,
+      lines: `Web Development,UI/UX Design,SEO Optimization,Mobile Optimization`,
     },
   ],
    'antar-darshnam': [
@@ -172,11 +172,11 @@ const featureCards = {
     },
     {
       title: 'Results',
-      content: `• Peaceful user experience achieved • Increased community engagement • Mobile-optimized meditation platform • SEO-optimized for spiritual wellness keywords`,
+      content: `• Peaceful user experience achieved\n • Increased community engagement\n • Mobile-optimized meditation platform\n • SEO-optimized for spiritual wellness keywords`,
     },
     {
       title: 'Technologies Used',
-      content: `React, Meditation Tools, Community platform, Mobile First `,
+      content: `React.js,Meditation Tools,Community platform,Mobile First `,
       serviceProvided: 'Services Provided',
       lines: `Web Development, Spritual Branding ,Community Building , Mobile Optimization`,
     },
@@ -193,11 +193,11 @@ const featureCards = {
     },
     {
       title: 'Results',
-      content: `• 400% increase in online orders • Expanded customer base beyond local area • Streamlined order management system • Preserved brand heritage in digital format`,
+      content: `• 400% increase in online orders\n • Expanded customer base beyond local area\n • Streamlined order management system\n • Preserved brand heritage in digital format`,
     },
     {
       title: 'Technologies Used',
-      content: `React, E-commerce, Platform, Payment Gateway, CMS`,
+      content: `React,E-commerce,Platform,Payment Gateway,CMS`,
       serviceProvided: 'Services Provided',
       lines: `E-commerce Development, Brand Preservation, Digital Marketing, Order Management`,
     },

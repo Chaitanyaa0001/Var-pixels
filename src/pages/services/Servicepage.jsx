@@ -10,6 +10,7 @@ import {
   RiCpuLine
 } from 'react-icons/ri';
 import Footer from '../../components/footer/Footer';
+import ProcessSection from '../../components/process/Processsection';
 
 const services = [
   {
@@ -70,9 +71,11 @@ const Servicepage = () => {
         <p className="mt-4 text-gray-600 text-lg">
           From web development to AI solutions, we provide comprehensive digital services that help your business thrive in the digital landscape.
         </p>
+        <Link to='/contact'>
         <button className="mt-6 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:scale-105 transition">
           Get Started Today →
         </button>
+        </Link>
       </div>
 
       {/* Service Cards */}
@@ -107,6 +110,7 @@ const Servicepage = () => {
 
         ))}
       </div>
+      <ProcessSection/>
       <Footer/>
     </div>
   );
