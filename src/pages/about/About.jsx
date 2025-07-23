@@ -7,6 +7,7 @@ import A3 from '../../assets/about/A3.png'
 import A4 from '../../assets/about/A4.png'
 import A5 from '../../assets/about/A5.png'
 import ReadyToWorkBanner from '../../components/ReadyToWorkBanner';
+import { Link } from 'react-router-dom';
 
 
 const team = [
@@ -57,12 +58,17 @@ const About = () => {
             At VAR PIXELS, we collaborate with brands that want to make a real impact online.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
+           <Link to='/service'>
             <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-md transition">
               Get Started Today →
             </button>
+            </Link>
+            <Link to='/portfolio'>
             <button className="border border-blue-600 hover:bg-blue-50 text-blue-600 px-6 py-3 rounded-md font-medium">
               Our Portfolio
             </button>
+            </Link>
+
           </div>
         </div>
 

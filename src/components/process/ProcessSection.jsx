@@ -1,5 +1,6 @@
 import React from 'react';
 import { FiArrowRight, FiEye } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 const ProcessSection = () => {
   return (
@@ -86,12 +87,16 @@ const ProcessSection = () => {
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to='/contact'>
             <button className="bg-[#1982FC] text-white px-8 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-[#1570d8] transition-colors">
               Get Started Today <FiArrowRight />
             </button>
+            </Link>
+            <Link to='/portfolio'>
             <button className="border-2 border-[#1982FC] text-[#1982FC] px-8 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-[#1982FC] hover:text-white transition-colors">
               View Our Work <FiEye />
             </button>
+            </Link>
           </div>
         </div>
       </div>
