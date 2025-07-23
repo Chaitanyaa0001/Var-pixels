@@ -11,6 +11,8 @@ import {
   RiCpuLine,
   RiCheckLine
 } from 'react-icons/ri';
+import { FiArrowRight, FiEye } from 'react-icons/fi';
+
 
 
 const serviceData = {
