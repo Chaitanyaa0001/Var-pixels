@@ -19,10 +19,10 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 bg-white border-b border-cyan-200">
-      <div className="w-[80%] mx-auto py-2 flex justify-between items-center relative">
+      <div className=" w-[90%] lg:w-[80%] mx-auto py-2 flex justify-between items-center relative">
         <div className="flex items-center gap-2">
-          <img src={logo} alt="logo" className="w-16 h-12 object-contain" />
-          <h2 className="text-[#4c47e5] text-xl font-bold">Var PIXELS</h2>
+          <img src={logo} alt="logo" className=" w-12 text-[0.7rem] lg:w-16 lg:h-12 object-contain" />
+          <h2 className="text-[#4c47e5] text-xl font-bold">VAR PIXELS</h2>
         </div>
 
         {/* Desktop Menu */}
