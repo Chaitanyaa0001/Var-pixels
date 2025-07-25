@@ -7,6 +7,8 @@ import {
   FaLinkedinIn,
   FaTwitter,
   FaYoutube,
+  FaFacebookF, 
+  FaFacebook
 } from 'react-icons/fa';
 import WhatsAppButton from '../whatsapp/WhatsAppButton';
 
@@ -65,10 +67,11 @@ const Footer = () => {
         <div>
           <h4 className="text-[#06b6d4] font-semibold text-lg mb-4">Follow Us</h4>
           <div className="flex gap-4 text-lg mb-3">
-            <a href="#"><FaInstagram className="text-pink-500 hover:scale-110 transition" /></a>
-            <a href="#"><FaLinkedinIn className="text-blue-500 hover:scale-110 transition" /></a>
-            <a href="#"><FaTwitter className="text-cyan-400 hover:scale-110 transition" /></a>
-            <a href="#"><FaYoutube className="text-red-500 hover:scale-110 transition" /></a>
+            <a href="https://www.instagram.com/var_pixels" target='_blank' rel='noopener noreferrer'><FaInstagram className="text-pink-500 hover:scale-110 transition" /></a>
+            <a href="https://www.linkedin.com/in/var-pixels/"target='_blank' rel='noopener noreferrer'><FaLinkedinIn className="text-blue-500 hover:scale-110 transition" /></a>
+            <a href="https://x.com/VARPixels30"target='_blank' rel='noopener noreferrer'><FaTwitter className="text-cyan-400 hover:scale-110 transition" /></a>
+            <a href="www.youtube.com/@VARPixels30"target='_blank' rel='noopener noreferrer'><FaYoutube className="text-red-500 hover:scale-110 transition" /></a>
+            <a href="https://www.facebook.com/profile.php?id=61576293225635"target='_blank' rel='noopener noreferrer'><FaFacebook className="text-blue-500 hover:scale-110 transition" /></a>
           </div>
           <p className="text-sm text-gray-400">
             Stay connected with us for updates, events, and digital marketing tips!
