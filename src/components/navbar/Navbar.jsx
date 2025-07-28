@@ -34,7 +34,7 @@ const Navbar = () => {
           <li ><NavLink to="/about" className={navLinkClass} onClick={closeMenu}>About</NavLink></li>
           <li ><NavLink to="/contact" className={navLinkClass} onClick={closeMenu}>Contact</NavLink></li>
         </ul>
-
+        {/* commit  krdiya  */}
         {/* Desktop Login Buttons */}
        <div className="hidden md:flex items-center gap-3">
           <Link to="/login">
